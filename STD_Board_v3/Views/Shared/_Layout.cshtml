@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - My Telerik MVC Application</title>
+    <link href="@Url.Content("~/Content/kendo/2020.3.1118/kendo.bootstrap-v4.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="@Url.Content("~/Scripts/kendo/2020.3.1118/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2020.3.1118/angular.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2020.3.1118/jszip.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2020.3.1118/kendo.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script src="~/Content/js/dummyData.js"></script>
+</head>
+<body class="k-content">
+
+    <div class="grid-container">
+
+        <header class="header">
+            <div class="header__title">STD Jurisdiction Contacts Dashboard</div>
+
+        </header>
+
+        <aside class="sidenav">
+            <div class="logo">
+                <img src="~/Images/cste_logo.png" alt="CSTE Logo" />
+
+            </div>
+
+            <p style="color: white; text-align: center; font-weight:500;">Admin Dashboard</p>
+
+            <ul class="sidenav__list">
+                <li class="sidenav__list-item">
+
+                    <i class="fa fa-users" style="font-size: 30px;"></i><br />
+                    Contacts
+                </li>
+                <li class="sidenav__list-item">
+                    <i class="fa fa-globe" style="font-size: 30px;"></i><br />
+                    Jurisdiction
+                </li>
+                <li class="sidenav__list-item" style="border-bottom: #fff 0.5px solid;">
+                    <i class="fa fa-user-plus" style="font-size: 30px;"></i><br />
+                    Roles
+                </li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </main>
+
+
+
+    </div><!-- End of grid-container-->
+
+    
+
+    <script>
+        $(document).ready(function () {
+            $("#responsive-panel").kendoResponsivePanel({
+                breakpoint: 768,
+                autoClose: false,
+                orientation: "top"
+            });
+            $("#menu").kendoMenu();
+        });
+        function onclick(e) {
+            $("#responsive-panel").getKendoResponsivePanel().toggle();
+        }
+
+        /* jQuery code for dropdownlist */
+
+        $("#dropdownlist").kendoDropDownList({
+            dataSource: [
+
+                { Name: "Epidemiologist", Id: 1 },
+                { Name: "Public Health Professional", Id: 2 }
+            ],
+            dataTextField: "Name",
+            dataValueField: "Id"
+        });
+
+
+        $("#dropdownlist-v2").kendoDropDownList({
+            dataSource: [
+                { Name: "Alabama", Id: 1 },
+                { Name: "Georgia", Id: 2 }
+            ],
+            dataTextField: "Name",
+            dataValueField: "Id"
+        });
+    </script>
+</body>
+</html>

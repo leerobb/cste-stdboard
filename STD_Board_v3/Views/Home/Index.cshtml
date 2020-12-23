@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="overall-container">
+
+    <div class="col-12 main">
+        <div class="justify-content-start">
+
+            <div class="test">
+
+                <div class="col-md-4 center-content">
+                    <h6>Select Jurisdiction:</h6>
+
+                    <p class="button-placement">
+                        <input id="dropdownlist-v2" class="lrg-btn" />
+                    </p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Select Roles:</h6>
+
+                    <p class="button-placement">
+                        <input id="dropdownlist" class="lrg-btn" />
+                    </p>
+                </div>
+
+
+            </div><!---End of Test-->
+
+
+
+        </div>
+    </div>
+
+    <div class="row grid-placement first-grid">
+        <div class="col-10">
+            <h6>Jurisdiction Details</h6>
+            <div id="grid-v1"></div>
+        </div>
+    </div>
+
+    <div class="row gridtwo-placement second-grid">
+        <div class="col-8">
+            <h6>Contact Inventory</h6>
+            <div id="grid"></div>
+        </div>
+    </div>
+
+
+</div><!--Overall-Container class End-->
+
+<script>
+    $(document).ready(function() {
+        $(".lrg-btn").kendoButton();
+        $("#grid").kendoGrid({
+        
+            height: 550,
+            filterable: true,
+            sortable: true,
+            pageable: true,
+            columns: [{
+                    field:"Name",
+                    filterable: false
+                },
+                {
+                    field: "Email",
+                    title: "Email",
+                    filterable: false
+                },
+                {
+                    field: "Phone",
+                    title: "Phone",
+                    format: "{0:MM/dd/yyyy}",
+                    filterable: false
+                }, {
+                    field: "Hours",
+                    title: "Hours",
+                    filterable: false
+                }, {
+                    field: "Notes",
+                    title: "Notes",
+                    filterable: false
+                }, {
+                    field: "Jurisdiction",
+                    title: "Jurisdiction",
+                    filterable: false
+                }, {
+                    field: "Role",
+                    title: "Role",
+                    filterable: false
+                }, {
+                    command: ["edit", "destroy"],
+                    title: "Edit    |   Delete",
+                    width: "250px"
+                },
+            ]
+        });
+    });
+
+    /* Grid-v1 */
+
+    $(document).ready(function () {
+        
+        $("#grid-v1").kendoGrid({
+            height: 150,
+            columns: [{
+                field: "Name",
+                filterable: false
+            },
+            {
+                field: "Email",
+                title: "Email",
+                filterable: false
+            },
+            {
+                field: "Phone",
+                title: "Phone",
+                format: "{0:MM/dd/yyyy}",
+                filterable: false
+            }, {
+                field: "Hours",
+                title: "Hours",
+                filterable: false
+            }, {
+                field: "Notes",
+                title: "Notes",
+                filterable: false
+            }, {
+                field: "Jurisdiction",
+                title: "Jurisdiction",
+                filterable: false
+            }, {
+                field: "Role",
+                title: "Role",
+                filterable: false
+            }
+            ]
+        });
+    });
+</script>

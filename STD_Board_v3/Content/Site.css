@@ -1,0 +1,227 @@
+﻿
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
+    height: 100vh;
+}
+
+
+
+
+/* Give every child element its grid name */
+.header {
+    grid-area: header;
+    background-color: #d7dbdd;
+    background-image: linear-gradient(45deg, rgba( 0, 52, 121, 0.88), rgba( 0, 52, 121, 0.88)), url('../Images/cste_pattern_webready.png');
+    background-repeat: repeat-x;
+    height: 165px;
+}
+
+.sidenav {
+    grid-area: sidenav;
+    background-color: #003479;
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 240px;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    
+}
+
+.main {
+    grid-area: main;
+    grid-template-columns: 50% 50%;
+    max-width: 100% !important;
+    position: absolute;
+    top: 25vh;
+    left: 26vw;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #d7dbdd;
+    clear: both;
+}
+
+.footer__copyright {
+    text-align: center;
+    padding-top: 18px;
+}
+
+
+.main-header__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.8em;
+    padding-top: 60px;
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+img {
+    width: 38%;
+}
+
+
+/* Nav Styles */
+
+.sidenav__list {
+    padding: 0;
+    margin-top: 45px;
+    list-style-type: none;
+}
+
+.sidenav__list-item {
+    padding: 50px 0px 50px 0px;
+    color: #ddd;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: 500;
+    border-top: #fff 0.5px solid;
+    
+}
+
+    .sidenav__list-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+    }
+
+/* #region custom Kendo UI styles */
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+h6 {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #363636;
+}
+
+
+.justify-content-start {
+    max-width: 1400px;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 5vw;
+    margin-bottom: 300px;
+}
+
+.second-grid {
+    margin-bottom: 75px;
+}
+
+.lrg-btn {
+    width: 100%;
+}
+
+.center-content {
+    position: relative;
+    right: 8vw;
+}
+
+
+.grid-placement {
+    display: block;
+    margin-top: 415px;
+    position: absolute;
+    left: 23%;
+}
+
+.gridtwo-placement {
+    display: block;
+    width: 100%;
+    margin-top: 715px;
+    position: absolute;
+    left: 23%;
+}
+
+
+p .k-button {
+    margin: 0 15px 0 0;
+}
+
+#configure {
+    display: none;
+}
+
+p .k-button {
+    margin: 0 15px 0 0;
+}
+
+#responsive-panel {
+    padding: 0;
+}
+
+    #responsive-panel .k-menu {
+        padding: .5rem;
+    }
+/* #endregion */
+@media (max-width: 767px) {
+    #responsive-panel {
+        transition: all linear .2s;
+    }
+
+    #configure {
+        display: block;
+        float: right;
+    }
+
+    .k-rpanel {
+        padding: 0 1rem;
+    }
+
+    .k-rpanel-expanded {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-header {
+        width: 100%;
+    }
+
+    .k-menu .k-item,
+    .k-menu .k-link {
+        width: 100%;
+    }
+
+    .k-menu .k-link {
+        box-sizing: border-box;
+    }
+}
+}
