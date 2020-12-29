@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<InMemoryContactData.Models.Contact>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -47,6 +49,8 @@
         </div>
     </div>
 
+    <div>There are number in the db.</div>
+
 
 </div><!--Overall-Container class End-->
 
@@ -91,7 +95,7 @@
                     filterable: false
                 }, {
                     command: ["edit", "destroy"],
-                    title: "Edit    |   Delete",
+                    title: "  ",
                     width: "250px"
                 },
             ]
@@ -138,4 +142,69 @@
             ]
         });
     });
+
+    
+    /* Test Grid */
+
+    $(document).ready(function () {
+        var crudServiceBaseUrl = "https://demos.telerik.com/kendo-ui/service",
+            dataSource = new kendo.data.DataSource({
+                transport: {
+                    read: {
+                        url: crudServiceBaseUrl + "/Products",
+                        dataType: "jsonp"
+                    },
+                    update: {
+                        url: crudServiceBaseUrl + "/Products/Update",
+                        dataType: "jsonp"
+                    },
+                    destroy: {
+                        url: crudServiceBaseUrl + "/Products/Destroy",
+                        dataType: "jsonp"
+                    },
+                    create: {
+                        url: crudServiceBaseUrl + "/Products/Create",
+                        dataType: "jsonp"
+                    },
+                    parameterMap: function (options, operation) {
+                        if (operation !== "read" && options.models) {
+                            return { models: kendo.stringify(options.models) };
+                        }
+                    }
+                },
+                batch: true,
+                pageSize: 20,
+                schema: {
+                    model: {
+                        id: "ProductID",
+                        fields: {
+                            ProductID: { editable: false, nullable: true },
+                            ProductName: { validation: { required: true } },
+                            UnitPrice: { type: "number", validation: { required: true, min: 1 } },
+                            Discontinued: { type: "boolean" },
+                            UnitsInStock: { type: "number", validation: { min: 0, required: true } }
+                        }
+                    }
+                }
+            });
+
+        $("#grid").kendoGrid({
+            dataSource: dataSource,
+            pageable: true,
+            height: 550,
+            toolbar: ["create"],
+            columns: [
+                { field: "ProductName", title: "Product Name" },
+                { field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: "120px" },
+                { field: "UnitsInStock", title: "Units In Stock", width: "120px" },
+                { field: "Discontinued", width: "120px", editor: customBoolEditor },
+                { command: ["edit", "destroy"], title: "&nbsp;", width: "250px" }],
+            editable: "popup"
+        });
+    });
+
+    function customBoolEditor(container, options) {
+        $('<input class="k-checkbox" type="checkbox" name="Discontinued" data-type="boolean" data-bind="checked:Discontinued">').appendTo(container);
+    }
+
 </script>

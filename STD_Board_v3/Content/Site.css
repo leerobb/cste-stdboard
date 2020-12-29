@@ -6,6 +6,7 @@ html {
 
 body {
     margin-bottom: 60px;
+    background-color: #f1f1f1;
 }
 
 .grid-container {
@@ -14,6 +15,61 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
     height: 100vh;
+}
+
+/* Override Kendo styles */
+
+.k-pager-numbers .k-link.k-state-selected {
+    border-color: #639ec8 !important;
+    color: #ffffff;
+    background-color: #639ec8 !important;
+}
+
+.k-grid-toolbar .k-button {
+    background-color: #639ec8 !important;
+}
+
+span.k-icon {
+    color: white !important;
+}
+
+.k-grid-add {
+    color: #fff !important;
+}
+
+.k-grid-edit {
+    background-color: #639ec8 !important;
+}
+
+.k-button {
+    color: #fff !important;
+}
+
+.k-grid-delete {
+    background-color: #d20202;
+}
+
+
+.k-dropdown .k-dropdown-wrap, .k-dropdowntree .k-dropdown-wrap {
+    border-color: #639ec8 !important;
+    background-color: #639ec8 !important;
+}
+
+
+.k-dropdown, .k-dropdowntree {
+    background: #639ec8 !important;
+}
+
+
+.k-input {
+    color: #fff !important;
+    font-size: 1.10em;
+}
+
+.k-pager-nav.k-link, .k-pager-refresh {
+    border-color: #dee2e6;
+    color: #639ec8 !important;
+    background-color: #639ec8 !important;
 }
 
 

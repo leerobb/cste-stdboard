@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InMemoryContactData.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,17 @@ namespace STD_Board_v3.Controllers
 {
     public class HomeController : Controller
     {
+        IContactData db;
+
+        public HomeController()
+        {
+            db = new InMemoryContactsData();
+        }
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            var model = db.GetAll();
 
-            return View();
+            return View(model);
         }
     }
 }

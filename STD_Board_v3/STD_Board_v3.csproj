@@ -114,6 +114,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\js\dummyData.js" />
     <Content Include="Content\kendo\2020.3.1118\Black\editor.png" />
     <Content Include="Content\kendo\2020.3.1118\Black\imagebrowser.png" />
     <Content Include="Content\kendo\2020.3.1118\Black\indeterminate.gif" />
@@ -556,7 +557,11 @@
     <Content Include="Content\kendo\2020.3.1118\images\kendoui.woff" />
     <None Include="packages.config" />
     <Content Include="Images\200.png" />
+    <Content Include="Images\address-card.svg" />
+    <Content Include="Images\compass.svg" />
     <Content Include="Images\cste_logo.png" />
+    <Content Include="Images\cste_pattern_webready.png" />
+    <Content Include="Images\user-circle.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -917,6 +922,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InMemoryContactData\InMemoryContactData.csproj">
+      <Project>{82d30c0b-3cce-469a-8564-ce502c491080}</Project>
+      <Name>InMemoryContactData</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

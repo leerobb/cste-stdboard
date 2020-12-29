@@ -1,0 +1,6 @@
+C:\Users\lroberts\source\repos\STD_Board_v3\InMemoryContactData\bin\Debug\InMemoryContactData.dll
+C:\Users\lroberts\source\repos\STD_Board_v3\InMemoryContactData\bin\Debug\InMemoryContactData.pdb
+C:\Users\lroberts\source\repos\STD_Board_v3\InMemoryContactData\obj\Debug\InMemoryContactData.csprojAssemblyReference.cache
+C:\Users\lroberts\source\repos\STD_Board_v3\InMemoryContactData\obj\Debug\InMemoryContactData.csproj.CoreCompileInputs.cache
+C:\Users\lroberts\source\repos\STD_Board_v3\InMemoryContactData\obj\Debug\InMemoryContactData.dll
+C:\Users\lroberts\source\repos\STD_Board_v3\InMemoryContactData\obj\Debug\InMemoryContactData.pdb

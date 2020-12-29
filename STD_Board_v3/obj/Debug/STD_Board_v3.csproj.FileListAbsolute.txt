@@ -26,3 +26,5 @@ C:\Users\lroberts\source\repos\STD_Board_v3\STD_Board_v3\obj\Debug\STD_Board_v3.
 C:\Users\lroberts\source\repos\STD_Board_v3\STD_Board_v3\obj\Debug\STD_Board_v3.csproj.CopyComplete
 C:\Users\lroberts\source\repos\STD_Board_v3\STD_Board_v3\obj\Debug\STD_Board_v3.dll
 C:\Users\lroberts\source\repos\STD_Board_v3\STD_Board_v3\obj\Debug\STD_Board_v3.pdb
+C:\Users\lroberts\source\repos\STD_Board_v3\STD_Board_v3\bin\InMemoryContactData.dll
+C:\Users\lroberts\source\repos\STD_Board_v3\STD_Board_v3\bin\InMemoryContactData.pdb
